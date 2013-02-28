@@ -1,0 +1,194 @@
+@CHARSET "ISO-8859-1";
+
+*	{
+	padding: 0;
+	margin: 0;
+	}
+
+body{
+    background: url("mockup1_0011_bg1.png");
+    font-family: tahoma;
+	color: #dadcde;
+	width: auto;
+	height: 101%;
+}
+
+p{
+	color: #000;
+}
+
+#background2{
+	position: absolute;
+	background: url("mockup1_0010_bg2.png");
+	width: 741px;
+	height: 725px;
+	top:10px;
+	left:50px;
+}
+
+#tablebase{
+	position: relative;
+	background: url("mockup1_0009_base.png");
+	width: 678px;
+	height: 590px;
+	top: 70px;
+	left: 25px;
+}
+
+#toparea{
+	position: relative;
+	background: url("mockup1_0004_toparea.png");
+	width: 617px;
+	height: 157px;
+	top: 20px;
+	left: 25px;	
+}
+
+#toparea_text{
+	text-align: center;
+	color: #039;
+	position: relative;
+    top: 40%;
+}
+
+#tablearea{
+	position: relative;
+	background: url("mockup1_0003_tablearea.png");
+	width: 613px;
+	height: 373px;
+	top: 30px;
+	left: 25px;
+	display:table-cell;	
+	vertical-align: middle;
+	color: #039;
+}
+	#tablearea_text{
+	text-align: center;
+	color: #039;
+	position: relative;
+}
+
+#menubuttons{
+	position: relative;
+	bottom: 555px;
+	left: 25px;	
+}
+
+#menubuttons_stat{
+	position: relative;
+	left: 30px;
+}
+
+#diagramm{
+	position: relative;
+	left: 240px;	
+}
+
+#Login{
+	position: relative;
+	top: 30px;
+	left: 25px;
+}
+
+#Login_menu{
+	position: relative;
+	bottom: 30px;
+	left: 180px;
+}
+
+#Search{
+	position: relative;
+	bottom: 580px;
+	left: 40px;
+}
+
+#Search2{
+	position: relative;
+	left: 15px;
+}
+
+.sort{
+	position: relative;
+	left: 15px;
+}
+
+#logout{
+	position: relative;
+	bottom: 600px;
+	left: 600px;
+	font-size: 12px;	
+	color: #039;
+}
+
+#register{
+	position: relative;
+	bottom: 600px;
+	left: 600px;
+	font-size: 12px;
+	color: #039;	
+}
+
+#result_table{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	position: relative;
+	margin: auto;
+	text-align: left;
+	border-collapse: collapse;
+	width: 90%;
+}
+
+#result_table th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+
+#result_table td
+{
+	padding: 8px;
+	background: #e8edff; 
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+
+#result_table tr:hover td
+{
+	background: #d0dafd;
+	color: #339;
+}
+
+#est_picture{
+	position: relative;
+	top: 15px;
+	left: 210px;
+}
+
+#apply{
+	color: #000;
+	position: relative;
+	top: 15px;
+	left: 50px;
+}
+
+#confirm{
+	position: relative;
+	top: 15px;
+	left: 520px;
+}
+
+#new_user{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	position: relative;
+	margin: auto;
+	text-align: left;
+	border-collapse: collapse;
+	width: 90%;
+}
