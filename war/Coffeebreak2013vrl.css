@@ -6,6 +6,10 @@
 	}
 
 body{
+	/* alternatiiv pragusele taustameetodile ?
+	border:2px solid #a1a1a1;
+	padding:10px 40px; 
+	background:#dddddd; */
     background: url("mockup1_0011_bg1.png");
     font-family: tahoma;
 	color: #dadcde;

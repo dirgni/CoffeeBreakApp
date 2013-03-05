@@ -1,0 +1,61 @@
+<form id="kandidatuur_form" action="">
+	<table>
+		<tr>
+			<td>Eesnimi:</td>
+			<td><input name="regfirstname" type="text" /></td>
+		</tr>
+		<tr>
+			<td>Perekonnanimi:</td>
+			<td><input name="reglastname" type="text" /></td>
+		</tr>
+		<tr>
+			<td>Vanus:</td>
+			<td><select id="reg-age">
+					<option value="choose" selected="selected">vali...</option>
+					<for (int i=18; i< 100; i++) {%>
+					<option value="<%=i%>"><%=i%></option>
+					<% } %>
+					
+			</select></td>
+		</tr>
+		<tr>
+			<td>Maakond:</td>
+			<td><select id="reg-region">
+					<option value="choose" selected="selected">Valige maakond...</option>
+					<option value="Harju maakond">Harju maakond</option>
+					<option value="Hiiu maakond">Hiiu maakond</option>
+					<option value="Ida-Viru maakond">Ida-Viru maakond</option>
+					<option value="Jıgeva maakond">Jıgeva maakond</option>
+					<option value="J‰rva maakond">J‰rva maakond</option>
+					<option value="L‰‰ne maakond">L‰‰ne maakond</option>
+					<option value="L‰‰ne-Viru maakond">L‰‰ne-Viru maakond</option>
+					<option value="Pılva maakond">Pılva maakond</option>
+					<option value="P‰rnu maakond">P‰rnu maakond</option>
+					<option value="Rapla maakond">Rapla maakond</option>
+					<option value="Saare maakond">Saare maakond</option>
+					<option value="Tartu maakond">Tartu maakond</option>
+					<option value="Valga maakond">Valga maakond</option>
+					<option value="Viljandi maakond">Viljandi maakond</option>
+					<option value="Vıru maakond">Vıru maakond</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Partei:</td>
+			<td>
+				<select id="reg-party">
+					<option value="choose" selected="selected">Valige partei...</option>
+					<option value="VOT">VOT</option>
+					<option value="Puukesed">Puukesed</option>
+					<option value="Vıpsikud">Vıpsikud</option>
+					<option value="Kuusekesed">Kuusekesed</option>
+					<option value="Randomness">Randomness</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input id="reg-submit" type="submit" value="Registreeri" />
+			</td>
+		</tr>
+	</table>
+</form>
