@@ -1,47 +1,69 @@
 @CHARSET "ISO-8859-1";
 
-*	{
-	padding: 0;
-	margin: 0;
-	}
+#header{
+	display: inline;
+}
 
 body{
-	/* alternatiiv pragusele taustameetodile ?
-	border:2px solid #a1a1a1;
-	padding:10px 40px; 
-	background:#dddddd; */
-    background: url("mockup1_0011_bg1.png");
+    background: #3b3b3b;
     font-family: tahoma;
-	color: #dadcde;
+	color: #000000;
 	width: auto;
-	height: 101%;
+	height: 101%; 
+}
+
+#supercontainer{
+	margin: auto;
 }
 
 p{
 	color: #000;
 }
 
-#background2{
-	position: absolute;
-	background: url("mockup1_0010_bg2.png");
-	width: 741px;
-	height: 725px;
-	top:10px;
-	left:50px;
+.menu { 
+	padding: 0;
+}
+.menu li {
+	display: inline;
+}
+.menu li a {
+	background: #ccf;
+	padding: 10px;
+	float:left;
+	border-right: 1px solid #ccf;
+	border-bottom: none;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+.menu li.active a { 
+	background: #eef; 
+}
+.container {
+/* 	float: left; */
+	clear: both;
+	border: 1px solid #ccf;
+	border-top: none;
+	border-left: none;
+	background: #eef;
+	padding: 10px 20px 20px;
+	width: 80%;
+	position: relative;
 }
 
-#tablebase{
+
+/* .container{
 	position: relative;
-	background: url("mockup1_0009_base.png");
+	background: url("../graphics/mockup1_0009_base.png");
 	width: 678px;
 	height: 590px;
 	top: 70px;
 	left: 25px;
-}
+} */
 
-#toparea{
+/* #toparea{
 	position: relative;
-	background: url("mockup1_0004_toparea.png");
+	background: url("../graphics/mockup1_0004_toparea.png");
 	width: 617px;
 	height: 157px;
 	top: 20px;
@@ -55,9 +77,9 @@ p{
     top: 40%;
 }
 
-#tablearea{
+#contentarea{
 	position: relative;
-	background: url("mockup1_0003_tablearea.png");
+	background: url("../graphics/mockup1_0003_tablearea.png");
 	width: 613px;
 	height: 373px;
 	top: 30px;
@@ -66,7 +88,7 @@ p{
 	vertical-align: middle;
 	color: #039;
 }
-	#tablearea_text{
+	#contentarea_text{
 	text-align: center;
 	color: #039;
 	position: relative;
@@ -78,7 +100,7 @@ p{
 	left: 25px;	
 }
 
-#menubuttons_stat{
+#navigation_stat{
 	position: relative;
 	left: 30px;
 }
@@ -88,7 +110,7 @@ p{
 	left: 240px;	
 }
 
-#Login{
+#userlnks{
 	position: relative;
 	top: 30px;
 	left: 25px;
@@ -196,3 +218,4 @@ p{
 	border-collapse: collapse;
 	width: 90%;
 }
+ */
