@@ -10,6 +10,12 @@ body{
 	position: relative;
 }
 
+#supercontainer{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
 #header{
 	background: #ccf;
 	padding: 10px;
@@ -24,12 +30,6 @@ body{
 #header h1{
 	font-style: italic;
 	font-family: serif;
-}
-
-#supercontainer{
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
 }
 
 p{
