@@ -428,24 +428,25 @@
 								<tr>
 									<td>Eesnimi</td>
 									<td><input type="text" name="eesnimi" id="eesn" class="normaalkuju"
-										placeholder="Peeter"></td>
+										placeholder="Peeter" onChange="eesnimi_validation(this,2,40);"></td>
 									<td id="eesnimi_error" class="valerror"></td>
 								</tr>
 								<tr>
 									<td>Perenimi</td>
 									<td><input type="text" name="perenimi" id="peren"
-										placeholder="Oja"></td>
+										placeholder="Oja" onChange="perenimi_validation(this,2,40)"></td>
 									<td id="perenimi_error" class="valerror"></td>
 								</tr>
 								<tr>
 									<td>E-mail</td>
 									<td><input type="text" name="email" id="mail"
-										placeholder="peeter-oja@gmail.com"></td>
+										placeholder="peeter-oja@gmail.com" onChange="ValidateEmail(this)"></td>
 									<td id="email_error" class="valerror"></td>
 								</tr>
 								<tr>
 									<td>Sünnikuupäev</td>
-									<td><select name="synnipaev" id="sp">
+									<td><select name="synnipaev" id="sp"
+												onChange="selectsp(this)">
 											<option value="default" selected="selected">- Päev -</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -479,7 +480,8 @@
 											<option value="30">30</option>
 											<option value="31">31</option>
 										</select>
-										<select name="synnikuu" id="sk">
+										<select name="synnikuu" id="sk"
+												onChange="selectsk(this)">
 											<option value="default" selected="selected">- Kuu -</option>
 											<option value="1">Jaanuar</option>
 											<option value="2">Veebruar</option>
@@ -494,7 +496,8 @@
 											<option value="11">November</option>
 											<option value="12">Detsember</option>
 										</select>
-										<select name="synniaasta" id="sa">
+										<select name="synniaasta" id="sa"
+												onChange="selectsa(this)">
 											<option value="default" selected="selected">- Aasta -</option>
 											<option value="2011">2011</option>
 											<option value="2010">2010</option>
@@ -614,7 +617,8 @@
 								</tr>
 								<tr>
 									<td>Erakond</td>
-									<td><select name="reg_erakond" id="r_era">
+									<td><select name="reg_erakond" id="r_era"
+												onChange="selectpar(this)">
 											<option value="default" selected="selected">Valige partei...</option>
 											<option value="VOT">VOT</option>
 											<option value="Puukesed">Puukesed</option>
@@ -627,7 +631,8 @@
 								</tr>
 								<tr>
 									<td>Maakond</td>
-									<td><select name="reg_regioon" id="r_reg">
+									<td><select name="reg_regioon" id="r_reg"
+												onChange="selectpiir(this)">
 											<option value="default" selected="selected">Valige maakond...</option>
 											<option value="Harju maakond">Harju maakond</option>
 											<option value="Hiiu maakond">Hiiu maakond</option>
