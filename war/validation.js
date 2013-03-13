@@ -9,25 +9,43 @@ function formvalidation(){
 	var uerakond = document.apply.reg_erakond;  
 	var uregioon = document.apply.reg_regioon;
 
-	if(eesnimi_validation(ueesnimi,2,40)){  
-		if(perenimi_validation(uperenimi,2,40)){  
-			if(ValidateEmail(uemail)){   
-				if(selectsp(usynnipaev)){  
-					if(selectsk(usynnikuu)){  
-						if(selectsa(usynniaasta)){  
-							if(selectpar(uerakond)){  
-								if(selectpiir(uregioon)){  
-									alert('JEE!!!1!ykssz');  
-									window.location.reload() 
-								}
-							}
-						}
-					}  
-				}  
-			}  
-		}  
-	} 
-	return false;  
+	var fail1, fail2, fail3, fail4, fail5, fail6, fail7, fail8;
+	
+	fail1 = eesnimi_validation(ueesnimi,2,40);
+	fail2 = perenimi_validation(uperenimi,2,40);
+	fail3 = ValidateEmail(uemail);
+	fail4 = selectsp(usynnipaev);
+	fail5 = selectsk(usynnikuu);
+	fail6 = selectsa(usynniaasta);
+	fail7 = selectpar(uerakond);
+	fail8 = selectpiir(uregioon);
+	
+	if(fail1 && fail2 && fail3 && fail4 && fail5 && fail6 && fail7 && fail8){
+		alert('JEE!!!1!ykssz');  
+//		window.location.reload()
+	} else {
+		return false;
+	}
+	
+//	if(eesnimi_validation(ueesnimi,2,40)){  
+//		if(perenimi_validation(uperenimi,2,40)){  
+//			if(ValidateEmail(uemail)){   
+//				if(selectsp(usynnipaev)){  
+//					if(selectsk(usynnikuu)){  
+//						if(selectsa(usynniaasta)){  
+//							if(selectpar(uerakond)){  
+//								if(selectpiir(uregioon)){  
+//									alert('JEE!!!1!ykssz');  
+//									window.location.reload() 
+//								}
+//							}
+//						}
+//					}  
+//				}  
+//			}  
+//		}  
+//	} 
+//	return false;  
 } 
 
 function eesnimi_validation(unimi,mx,my)  
