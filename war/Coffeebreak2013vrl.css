@@ -10,15 +10,20 @@ body{
 	position: relative;
 }
 
+.valerror{
+	color: red;
+}
+
 #supercontainer{
 	margin-left: auto;
-	margin-right: auto;
+	/* margin-right: auto; */
 	width: 90%;
 }
 
 #header{
+	opacity: 0.9;
 	background: #ccf;
-	padding: 10px;
+	padding: 10px 20px 20px;
 	width: 90%;
 	color: #000;
 	border-top-left-radius: 10px;
@@ -41,10 +46,10 @@ p{
 }
 
 .menu { 
-    width: 87.25%;
+    width: 90%;
     text-align: center;
     margin:0;
-    padding: 0 auto;
+    padding: 0px 20px 0px;
     display:table;
     background: #723c20;
     border-style: ridge;
@@ -79,16 +84,35 @@ p{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 	clear: both;
-	/* border: 1px solid #ccf; */
 	border-top: 0px;
-	border-left: none;
 	background: #eef;
 	padding: 10px 20px 20px;
-	width: 87.25%;
+	width: 90%;
+	height:90%;
 	position: relative;
 	border-style: ridge;
 }
 
+.tables td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px dashed #ccf;
+}
+.tables td:nth-child(1){
+	width:25%;
+}
+
+.tables td:nth-child(2){
+	width:50%;
+}
+
+.buttonss {
+	width: 150px;
+}
+
+.input_error{
+	background-color: #fa2;
+}
 
 /* .container{
 	position: relative;
