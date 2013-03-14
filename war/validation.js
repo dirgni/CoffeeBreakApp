@@ -1,5 +1,3 @@
-
-
 function formvalidation(){
 	var ueesnimi = document.apply.eesnimi;  
 	var uperenimi = document.apply.perenimi;  

@@ -4,6 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-4">
 		
 		<link rel="stylesheet" type="text/css" href="Coffeebreak2013vrl.css">
+		<link rel="stylesheet" type="text/css" href="jquery-ui.css">
 		<link rel="stylesheet" type="text/css" href="print.css" media="print">
 		
 		<title>Coffee Break E-valimised</title>
@@ -36,7 +37,7 @@
 			</div><!-- End header -->
 		
 			<div id="navigation" >
-				<ul class="menu">
+				<ul id="navitab" class="menu">
 					<li class="active"><a href="#container_main">Kodu</a></li>
 					<li><a href="#container_haaleta">H‰‰leta</a></li>
 					<li><a href="#container_kandideeri">Kandideeri</a></li>
@@ -82,7 +83,7 @@
 								</form>
 							</div><!-- End diagramm -->	
 			
-							<table id="riik_table">
+							<table id="riik_table" class="sortable">
 								<tr>
 									<th>Piirkond</th>
 									<th>Partei</th>
@@ -145,7 +146,7 @@
 		
 						</div>	
 		
-						<table id="piirkond_table">
+						<table id="piirkond_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Partei</th>
@@ -203,7 +204,7 @@
 		
 						</div>
 						
-						<table id="partei_table">
+						<table id="partei_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -258,7 +259,7 @@
 		
 						</div>
 		
-						<table id="kandidaadid_table">
+						<table id="kandidaadid_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -315,8 +316,8 @@
 					
 					<div class="contentarea">
 					
-						<div id="result_table"></div>						
-
+						<div id="result_table"></div>
+					
 					</div> <!-- End contentarea -->
 		
 				</div> <!-- End container_tulemused -->
@@ -325,7 +326,7 @@
 					<div class="toparea">	</div><!-- End toparea -->
 					
 					<div class="contentarea">
-						<table id="haaleta_table">
+						<table id="haaleta_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -684,11 +685,14 @@
 			
 				</div><!-- End container_abi -->
 		</div>
+		<script src="jquery-1.9.1.js"></script>
 		<script src="jquery-1.9.0.min.js"></script>
+		<script src="jquery-ui.js"></script>
 		<script src="jquery.tabify.js"></script>
 		<script src="jquery.tabify.source.js"></script>
 		<script src="main.js"></script>
 		<script src="validation.js"></script>
+		<script src="sorttable.js"></script>
 		<script src="table2.js"></script>
 	</body>
 </html>
