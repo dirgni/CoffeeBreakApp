@@ -33,6 +33,7 @@
 						<input type="submit" value="Mine">
 					</form>
 				</div><!-- End Search -->
+				<div id="loading"><img src="ajax-loader.gif"></div>
 				
 			</div><!-- End header -->
 		
@@ -82,7 +83,8 @@
 									<input class="buttons" type="button" id="riik_diagramm" value="Kuva diagramm">
 								</form>
 							</div><!-- End diagramm -->	
-			
+							
+							<input id="riik_search" placeholder="Otsi..">
 							<table id="riik_table" class="sortable">
 								<tr>
 									<th>Piirkond</th>
@@ -125,17 +127,6 @@
 					</div>	
 					
 					<div id="container_piirkond" class="container">	
-						<form class="sort">
-							<select name="Valige piirkond">
-								<option>Keila</option>
-								<option>Kohtla-Järve</option>
-								<option>Pärnu</option>
-								<option>Rapla</option>
-								<option>Tartu</option>
-								<option>Võru</option>
-							</select>
-						</form>
-		
 		
 						<div class="diagramm">
 							<form>
@@ -145,7 +136,7 @@
 		
 		
 						</div>	
-		
+						<input id="piirkond_search" placeholder="Otsi..">		
 						<table id="piirkond_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
@@ -186,16 +177,7 @@
 					</div>	
 					
 					<div id="container_partei" class="container">	
-						<form class="sort">
-							<select name="Valige partei">
-								<option>Kuusekesed</option>
-								<option>Puukesed</option>
-								<option>Randomness</option>
-								<option>VOT</option>
-								<option>Võpsikud</option>
-							</select>
-						</form>
-		
+
 						<div class="diagramm">
 							<form>
 								<input class="button5" type="button" id="parte_diagramm"
@@ -203,7 +185,7 @@
 							</form>
 		
 						</div>
-						
+						<input id="partei_search" placeholder="Otsi..">
 						<table id="partei_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
@@ -244,12 +226,6 @@
 					</div>	
 					
 					<div id="container_kandidaadid" class="container">	
-						<div id="Search2">
-							<form>
-								<input name="Search" placeholder="Otsi kandidaati"> <input
-									type="submit" value="Mine">
-							</form>
-						</div>
 		
 						<div class="diagramm">
 							<form>
@@ -258,7 +234,7 @@
 							</form>
 		
 						</div>
-		
+						<input id="kandidaadid_search" placeholder="Otsi..">
 						<table id="kandidaadid_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
@@ -328,6 +304,7 @@
 					<div class="toparea">	</div><!-- End toparea -->
 					
 					<div class="contentarea">
+						<input id="haaleta_search" placeholder="Otsi..">
 						<table id="haaleta_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
