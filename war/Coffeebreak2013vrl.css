@@ -10,6 +10,23 @@ body{
 	position: relative;
 }
 
+.ajax_progress {
+  position: fixed;
+  display: none;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  background-image: url('ajax-loader.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  /* border: 1px solid green; */
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
 #supercontainer{
 	margin-left: auto;
 	/* margin-right: auto; */
@@ -126,6 +143,39 @@ p{
 
 .input_error{
 	background-color: #fa2;
+}
+
+.sortable{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	position: relative;
+	margin: auto;
+	text-align: left;
+	border-collapse: collapse;
+	width: 90%;
+}
+
+.sortable thead {
+    font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #723c20;
+	border-top: 4px solid black;
+	border-bottom: 1px solid #fff;
+	color: white;
+}
+
+.sortable td {
+	padding: 8px;
+	background: #e8edff; 
+	border-bottom: 1px solid #723c20;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+
+.sortable tr:hover td{
+	background: #d0dafd;
+	color: #339;
 }
 
 /* .container{

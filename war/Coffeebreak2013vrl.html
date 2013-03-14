@@ -4,12 +4,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		
 		<link rel="stylesheet" type="text/css" href="Coffeebreak2013vrl.css">
+		<link rel="stylesheet" type="text/css" href="jquery-ui.css">
 		<link rel="stylesheet" type="text/css" href="print.css" media="print">
 		
 		<title>Coffee Break E-valimised</title>
 	</head>
 
 	<body>
+		<div class="ajax_progress"></div>i
 	
 		<div id="supercontainer">
 		
@@ -22,7 +24,9 @@
 					Kasutaja: Peeter Oja
 					<form>
 						<input class="buttons" type="button" id="Logout" value="Logi välja"
-							onclick="location.href='main_guest.html';">
+							onclick="signingout();">
+							<!-- onclick="location.href='main_guest.html';" -->
+							
 					</form>
 				</div><!-- End userlinks -->
 				
@@ -36,7 +40,7 @@
 			</div><!-- End header -->
 		
 			<div id="navigation" >
-				<ul class="menu">
+				<ul id="navitab" class="menu">
 					<li class="active"><a href="#container_main">Kodu</a></li>
 					<li><a href="#container_haaleta">Hääleta</a></li>
 					<li><a href="#container_kandideeri">Kandideeri</a></li>
@@ -82,7 +86,7 @@
 								</form>
 							</div><!-- End diagramm -->	
 			
-							<table id="result_table">
+							<table id="result_table" class="sortable">
 								<tr>
 									<th>Piirkond</th>
 									<th>Partei</th>
@@ -145,7 +149,7 @@
 		
 						</div>	
 		
-						<table id="result_table">
+						<table id="result_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Partei</th>
@@ -203,7 +207,7 @@
 		
 						</div>
 						
-						<table id="result_table">
+						<table id="result_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -243,7 +247,7 @@
 					</div>	
 					
 					<div id="container_kandidaadid" class="container">	
-						<div id="Search2">
+						<div id="Search2" class="ui-widget">
 							<form>
 								<input name="Search" placeholder="Otsi kandidaati"> <input
 									type="submit" value="Mine">
@@ -258,7 +262,7 @@
 		
 						</div>
 		
-						<table id="result_table">
+						<table id="result_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -314,7 +318,7 @@
 					</div><!-- End toparea -->
 					
 					<div id="contentarea">
-						<table id="result_table">
+						<table id="result_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -366,7 +370,7 @@
 					<div id="toparea">	</div><!-- End toparea -->
 					
 					<div id="contentarea">
-						<table id="result_table">
+						<table id="result_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -725,10 +729,13 @@
 			
 				</div><!-- End container_abi -->
 		</div>
+		<script src="jquery-1.9.1.js"></script>
 		<script src="jquery.js"></script>
+		<script src="jquery-ui.js"></script>
 		<script src="jquery.tabify.js"></script>
 		<script src="jquery.tabify.source.js"></script>
 		<script src="main.js"></script>
 		<script src="validation.js"></script>
+		<script src="sorttable.js"></script>
 	</body>
 </html>
