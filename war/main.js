@@ -1,6 +1,7 @@
 
 $('.menu').tabify();
 
+
 //$(function() {
 //    var available_partei = [
 //      "VOT",
