@@ -438,7 +438,7 @@
 											<option value="29">29</option>
 											<option value="30">30</option>
 											<option value="31">31</option>
-										</select>
+										</select><br><br>
 										<select name="synnikuu" id="sk"
 												onChange="selectsk(this)">
 											<option value="default" selected="selected">- Kuu -</option>
@@ -454,10 +454,10 @@
 											<option value="10">Oktober</option>
 											<option value="11">November</option>
 											<option value="12">Detsember</option>
-										</select>
+										</select><br><br>
 										<select name="synniaasta" id="sa"
 												onChange="selectsa(this)">
-											<option value="default" selected="selected">- Aasta -</option>
+											<option value="default" selected="selected" >- Aasta -</option>
 											<option value="2011">2011</option>
 											<option value="2010">2010</option>
 											<option value="2009">2009</option>
@@ -572,13 +572,17 @@
 											<option value="1900">1900</option>
 										</select>
 									</td>
-									<td id="synni_error" class="valerror"></td>
+									<td>
+										<div id="synnisp_error" class="valerror"> </div><br>
+										<div id="synnisk_error" class="valerror"> </div><br>
+										<div id="synnisa_error" class="valerror"> </div>
+									</td>
 								</tr>
 								<tr>
 									<td>Erakond</td>
 									<td><select name="reg_erakond" id="r_era"
 												onChange="selectpar(this)">
-											<option value="default" selected="selected">Valige partei...</option>
+											<option value="default" selected="selected">- Partei -</option>
 											<option value="VOT">VOT</option>
 											<option value="Puukesed">Puukesed</option>
 											<option value="Võpsikud">Võpsikud</option>
@@ -592,7 +596,7 @@
 									<td>Maakond</td>
 									<td><select name="reg_regioon" id="r_reg"
 												onChange="selectpiir(this)">
-											<option value="default" selected="selected">Valige maakond...</option>
+											<option value="default" selected="selected">- Maakond -</option>
 											<option value="Harju maakond">Harju maakond</option>
 											<option value="Hiiu maakond">Hiiu maakond</option>
 											<option value="Ida-Viru maakond">Ida-Viru maakond</option>
@@ -618,6 +622,7 @@
 										<input type="submit" class="buttonss" value="Kinnita kandidatuur" name="submit_kandidatuur"><br>
 										<input type="reset" class="buttonss" value="Tühjenda väljad" name="reset_field" onclick="algstaatus();">
 									</td>
+									<td></td>
 								</tr>
 							</table>
 						</form>

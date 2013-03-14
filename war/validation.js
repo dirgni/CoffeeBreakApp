@@ -1,4 +1,5 @@
 
+
 function formvalidation(){
 	var ueesnimi = document.apply.eesnimi;  
 	var uperenimi = document.apply.perenimi;  
@@ -103,12 +104,12 @@ function selectsp(uvalik)
 	if(uvalik.value == "default")  
 	{  
 		document.getElementById("sp").className = "input_error";
-		document.getElementById("synni_error").innerHTML="Vali sünnipäev";
+		document.getElementById("synnisp_error").innerHTML="Vali sünnipäev";
 		uvalik.focus();  
 		return false;			
 	}  
 	document.getElementById("sp").className = "";
-	document.getElementById("synni_error").innerHTML="";
+	document.getElementById("synnisp_error").innerHTML="";
 	return true;
 }  
 
@@ -117,12 +118,12 @@ function selectsk(uvalik)
 	if(uvalik.value == "default")  
 	{  
 		document.getElementById("sk").className = "input_error";
-		document.getElementById("synni_error").innerHTML= "Vali sünnikuu";
+		document.getElementById("synnisk_error").innerHTML= "Vali sünnikuu";
 		uvalik.focus();  
 		return false;					
 	}  
 	document.getElementById("sk").className = "";
-	document.getElementById("synni_error").innerHTML="";
+	document.getElementById("synnisk_error").innerHTML="";
 	return true;
 }  
 
@@ -131,12 +132,12 @@ function selectsa(uvalik)
 	if(uvalik.value == "default")  
 	{  
 		document.getElementById("sa").className = "input_error";
-		document.getElementById("synni_error").innerHTML="Vali sünniaasta"; 
+		document.getElementById("synnisa_error").innerHTML="Vali sünniaasta"; 
 		uvalik.focus();  
 		return false;				
 	}  
 	document.getElementById("sa").className = "";
-	document.getElementById("synni_error").innerHTML="";
+	document.getElementById("synnisa_error").innerHTML="";
 	return true;
 }  
 
@@ -186,9 +187,9 @@ function algstaatus() {
 	
 	document.getElementById("perenimi_error").innerHTML="";
 	document.getElementById("email_error").innerHTML="";
-	document.getElementById("synni_error").innerHTML="";
-	document.getElementById("synni_error").innerHTML="";
-	document.getElementById("synni_error").innerHTML="";
+	document.getElementById("synnisp_error").innerHTML="";
+	document.getElementById("synnisk_error").innerHTML="";
+	document.getElementById("synnisa_error").innerHTML="";
 	document.getElementById("partei_error").innerHTML="";
 	document.getElementById("piirkond_error").innerHTML="";
 	

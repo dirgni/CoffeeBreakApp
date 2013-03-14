@@ -10,10 +10,6 @@ body{
 	position: relative;
 }
 
-.valerror{
-	color: red;
-}
-
 #supercontainer{
 	margin-left: auto;
 	/* margin-right: auto; */
@@ -92,7 +88,11 @@ p{
 	position: relative;
 	border-style: ridge;
 }
-
+.tables{
+	table-layout:fixed;
+	width: 100%;
+	cellSpacing: 2px;
+}
 .tables td {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -106,8 +106,22 @@ p{
 	width:50%;
 }
 
+.tables td:nth-child(3){
+	width:25%;
+	position: absolute;
+}
+
+#sa #sk #sp{
+	width: 100px !important;
+}
+
 .buttonss {
-	width: 150px;
+	width: 160px;
+}
+
+.valerror{
+	color: red;
+	font-size: x-small;
 }
 
 .input_error{
