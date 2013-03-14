@@ -11,7 +11,6 @@
 	</head>
 
 	<body>
-		<div class="ajax_progress"></div>i
 	
 		<div id="supercontainer">
 		
@@ -24,9 +23,7 @@
 					Kasutaja: Peeter Oja
 					<form>
 						<input class="buttons" type="button" id="Logout" value="Logi v‰lja"
-							onclick="signingout();">
-							<!-- onclick="location.href='main_guest.html';" -->
-							
+							onclick="location.href='main_guest.html';">
 					</form>
 				</div><!-- End userlinks -->
 				
@@ -86,7 +83,7 @@
 								</form>
 							</div><!-- End diagramm -->	
 			
-							<table id="result_table" class="sortable">
+							<table id="riik_table" class="sortable">
 								<tr>
 									<th>Piirkond</th>
 									<th>Partei</th>
@@ -149,7 +146,7 @@
 		
 						</div>	
 		
-						<table id="result_table" class="sortable">
+						<table id="piirkond_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Partei</th>
@@ -207,7 +204,7 @@
 		
 						</div>
 						
-						<table id="result_table" class="sortable">
+						<table id="partei_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -247,7 +244,7 @@
 					</div>	
 					
 					<div id="container_kandidaadid" class="container">	
-						<div id="Search2" class="ui-widget">
+						<div id="Search2">
 							<form>
 								<input name="Search" placeholder="Otsi kandidaati"> <input
 									type="submit" value="Mine">
@@ -262,7 +259,7 @@
 		
 						</div>
 		
-						<table id="result_table" class="sortable">
+						<table id="kandidaadid_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -318,50 +315,9 @@
 					</div><!-- End toparea -->
 					
 					<div id="contentarea">
-						<table id="result_table" class="sortable">
-							<tr>
-								<th>Nimi</th>
-								<th>Piirkond</th>
-								<th>Partei</th>
-								<th>H‰‰lte arv</th>
-							</tr>
-							<tr>
-								<td>Mari Maasikas</td>
-								<td>Kohtla-J‰rve</td>
-								<td>Vıpsikud</td>
-								<td>126</td>
-							</tr>
-							<tr>
-								<td>Tauri Tamm</td>
-								<td>Keila</td>
-								<td>Puukesed</td>
-								<td>456</td>
-							</tr>
-							<tr>
-								<td>Janno Jıgi</td>
-								<td>Tartu</td>
-								<td>Kuusekesed</td>
-								<td>254</td>
-							</tr>
-							<tr>
-								<td>Meeri Mets</td>
-								<td>Rapla</td>
-								<td>VOT</td>
-								<td>1265</td>
-							</tr>
-							<tr>
-								<td>Kalle Kask</td>
-								<td>Vıru</td>
-								<td>Puukesed</td>
-								<td>852</td>
-							</tr>
-							<tr>
-								<td>Toomas Toomingas</td>
-								<td>P‰rnu</td>
-								<td>Randomness</td>
-								<td>111</td>
-							</tr>
-						</table>
+					
+						<div id="result_table"></div>
+					
 					</div> <!-- End contentarea -->
 		
 				</div> <!-- End container_tulemused -->
@@ -370,7 +326,7 @@
 					<div id="toparea">	</div><!-- End toparea -->
 					
 					<div id="contentarea">
-						<table id="result_table" class="sortable">
+						<table id="haaleta_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
 								<th>Piirkond</th>
@@ -730,12 +686,13 @@
 				</div><!-- End container_abi -->
 		</div>
 		<script src="jquery-1.9.1.js"></script>
-		<script src="jquery.js"></script>
+		<script src="jquery-1.9.0.min.js"></script>
 		<script src="jquery-ui.js"></script>
 		<script src="jquery.tabify.js"></script>
 		<script src="jquery.tabify.source.js"></script>
 		<script src="main.js"></script>
 		<script src="validation.js"></script>
 		<script src="sorttable.js"></script>
+		<script src="table2.js"></script>
 	</body>
 </html>

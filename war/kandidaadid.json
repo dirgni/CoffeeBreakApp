@@ -1,0 +1,122 @@
+[
+
+	{
+	"id": "1", 
+	"party" : {
+		"id":"VÕ",
+		"name":"Võpsikud"
+		}, 
+	"region": {
+		"id":"IV",
+		"name":"Ida-Virumaa"
+		},
+	"person": {
+		"id":"37907034623",
+		"name":"Mari Maasikas"
+		},
+	"vote_number": "126"	
+	},
+	
+	{
+	"id": "2", 
+	"party" : {
+		"id":"PU",
+		"name":"Puukesed"
+		}, 
+	"region": {
+		"id":"HR",
+		"name":"Harjumaa"
+		},
+	"person": {
+		"id":"37907034623",
+		"name":"Tauri Tamm"
+		},
+	"vote_number": "467"
+	},
+	
+	{
+	"id": "3", 
+	"party" : {
+		"id":"KU",
+		"name":"Kuusekesed"
+		}, 
+	"region": {
+		"id":"TA",
+		"name":"Tartumaa"
+		},
+	"person": {
+		"id":"37907034623",
+		"name":"Janno Jõgi"
+		},
+	"vote_number": "254"
+	},
+	
+	{
+	"id": "4", 
+	"party" : {
+		"id":"VOT",
+		"name":"VOT"
+		}, 
+	"region": {
+		"id":"RP",
+		"name":"Raplamaa"
+		},
+	"person": {
+		"id":"37907034623",
+		"name":"Meeri Mets"
+		},
+	"vote_number": "1265"
+	},
+	
+	{
+	"id": "5", 
+	"party" : {
+		"id":"PU",
+		"name":"Puukesed"
+		}, 
+	"region": {
+		"id":"VÕ",
+		"name":"Võrumaa"
+		},
+	"person": {
+		"id":"37907034623",
+		"name":"Kalle Kask"
+		},
+	"vote_number": "854"
+	},
+	
+	{
+	"id": "6", 
+	"party" : {
+		"id":"RA",
+		"name":"Randomness"
+		}, 
+	"region": {
+		"id":"PÄ",
+		"name":"Pärnumaa"
+		},
+	"person": {
+		"id":"37907034623",
+		"name":"Toomas Toomingas"
+		},
+	"vote_number": "111"
+	},
+	
+	{
+	"id": "7", 
+	"party" : {
+		"id":"REF",
+		"name":"Reformierakond"
+		}, 
+	"region": {
+		"id":"SM",
+		"name":"Saaremaa"
+		},
+	"person": {
+		"id":"37907034623",
+		"name":"Eduard Ekskavaator"
+		},
+	"vote_number": "2000"
+	}
+	
+]
