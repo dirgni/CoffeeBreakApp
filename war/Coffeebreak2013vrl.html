@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-4">
 		
 		<link rel="stylesheet" type="text/css" href="Coffeebreak2013vrl.css">
 		<link rel="stylesheet" type="text/css" href="print.css" media="print">
@@ -48,9 +48,9 @@
 			</div>
 			
 			<div id="container_main" class="container">
-				<div id="toparea">Tere tulemast!</div><!-- End toparea -->
+				<div class="toparea">Tere tulemast!</div><!-- End toparea -->
 				
-				<div id="contentarea">
+				<div class="contentarea">
 					<p>Mingid andmed enda kohta</p>
 					<p>Mingi lehekirjeldus</p>
 		
@@ -59,12 +59,12 @@
 			</div><!-- End container main -->
 		
 				<div id="container_statistika" class="container">
-					<div id="toparea">
+					<div class="toparea">
 						<img id="est_picture" src="Eesti_kaart.png"
 							alt="Siin peaks olema valimisstatistika graafid kaartil">
 					</div><!-- End toparea -->
 		
-					<div id="contentarea">
+					<div class="contentarea">
 					
 						<div id="navigation_stat">
 							<ul class="menu">
@@ -76,9 +76,9 @@
 						</div> <!-- End navigation_stat -->
 						
 						<div id="container_riik" class="container">				
-							<div id="diagramm">
+							<div class="diagramm">
 								<form>
-									<input class="buttons" type="button" id="diagramm" value="Kuva diagramm">
+									<input class="buttons" type="button" id="riik_diagramm" value="Kuva diagramm">
 								</form>
 							</div><!-- End diagramm -->	
 			
@@ -124,7 +124,7 @@
 					</div>	
 					
 					<div id="container_piirkond" class="container">	
-						<form class="sort" action="">
+						<form class="sort">
 							<select name="Valige piirkond">
 								<option>Keila</option>
 								<option>Kohtla-Järve</option>
@@ -136,9 +136,9 @@
 						</form>
 		
 		
-						<div id="diagramm">
+						<div class="diagramm">
 							<form>
-								<input class="button5" type="button" id="diagramm"
+								<input class="button5" type="button" id="piirkond_diagramm"
 									value="Kuva diagramm">
 							</form>
 		
@@ -185,7 +185,7 @@
 					</div>	
 					
 					<div id="container_partei" class="container">	
-						<form class="sort" action="">
+						<form class="sort">
 							<select name="Valige partei">
 								<option>Kuusekesed</option>
 								<option>Puukesed</option>
@@ -195,9 +195,9 @@
 							</select>
 						</form>
 		
-						<div id="diagramm">
+						<div class="diagramm">
 							<form>
-								<input class="button5" type="button" id="diagramm"
+								<input class="button5" type="button" id="parte_diagramm"
 									value="Kuva diagramm">
 							</form>
 		
@@ -250,9 +250,9 @@
 							</form>
 						</div>
 		
-						<div id="diagramm">
+						<div class="diagramm">
 							<form>
-								<input class="button5" type="button" id="diagramm"
+								<input class="button5" type="button" id="kandidaadid_diagramm"
 									value="Kuva diagramm">
 							</form>
 		
@@ -309,11 +309,11 @@
 				
 				<div id="container_tulemused" class="container">
 				
-					<div id="toparea">
-						<div id="toparea_text"><h2>Tulemuste hetkeseis</h2></div><!-- End toparea_text -->
+					<div class="toparea">
+						<div class="toparea_text"><h2>Tulemuste hetkeseis</h2></div><!-- End toparea_text -->
 					</div><!-- End toparea -->
 					
-					<div id="contentarea">
+					<div class="contentarea">
 					
 						<div id="result_table"></div>						
 
@@ -322,9 +322,9 @@
 				</div> <!-- End container_tulemused -->
 				
 				<div id="container_haaleta" class="container">
-					<div id="toparea">	</div><!-- End toparea -->
+					<div class="toparea">	</div><!-- End toparea -->
 					
-					<div id="contentarea">
+					<div class="contentarea">
 						<table id="haaleta_table">
 							<tr>
 								<th>Nimi</th>
@@ -379,9 +379,9 @@
 				</div><!-- End container_hääleta -->
 				
 				<div id="container_kandideeri" class="container">
-					<div id="toparea"> </div><!-- End toparea -->
+					<div class="toparea"> </div><!-- End toparea -->
 					
-					<div id="contentarea">
+					<div class="contentarea">
 						<form name="apply" onsubmit="return(formvalidation());">
 							<table id=application_form class="tables">
 								<tr>
@@ -631,11 +631,11 @@
 				</div> <!-- End container_kandideeri -->
 			
 				<div id="container_kontakt" class="container">
-					<div id="toparea">
-						<div id="toparea_text"><h2>Kontaktandmed</h2></div><!-- End toparea_text -->
+					<div class="toparea">
+						<div class="toparea_text"><h2>Kontaktandmed</h2></div><!-- End toparea_text -->
 					</div><!-- End toparea -->
 					
-					<div id="contentarea">
+					<div class="contentarea">
 						<div>
 							MaEiTeaMidagi Info: +372 655 4663<br><br>
 							<form method="post" action="MAILTO:matean@cb.com"
@@ -674,9 +674,9 @@
 				</div><!-- End container_kontakt-->
 				
 				<div id="container_abi" class="container">
-					<div id="toparea">Abistavat infot!</div><!-- End toparea -->
+					<div class="toparea">Abistavat infot!</div><!-- End toparea -->
 					
-					<div id="contentarea">
+					<div class="contentarea">
 						<p>Mingi abistav tekst..</p>
 						<p>KKK?</p>
 			
