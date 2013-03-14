@@ -10,6 +10,10 @@ body{
 	position: relative;
 }
 
+#loading{
+	text-align: center; 
+}
+
 .ajax_progress {
   position: fixed;
   display: none;
@@ -155,7 +159,7 @@ p{
 	width: 90%;
 }
 
-.sortable th {
+.sortable thead {
     font-size: 13px;
 	font-weight: normal;
 	padding: 8px;
