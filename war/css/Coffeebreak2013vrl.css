@@ -2,7 +2,7 @@
 
 body{
     /* background: #3b3b3b; */
-    background: url("bg.jpg") repeat scroll center top;
+    background: url("../graafika/bg.jpg") repeat scroll center top;
     font-family: tahoma;
 	color: #000000;
 	width: 90%;
@@ -21,7 +21,7 @@ body{
   height: 50px;
   top: 50%;
   left: 50%;
-  background-image: url('ajax-loader.gif');
+  background-image: url('../graafika/ajax-loader.gif');
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
@@ -81,7 +81,7 @@ p{
 	border-right: 1px solid #723c20;
 	border-bottom: none;
 	text-decoration: none;
-	color: #000;
+	color: #FFF;
 	font-weight: bold;
 }
 .menu li.active a { 
