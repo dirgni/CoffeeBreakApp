@@ -36,7 +36,7 @@
 							onclick="location.href='Coffeebreak2013vrl.html';">
 					</form>
 					<form>
-						<input type="button" id="reg_u" value="Registreeri">
+						<input type="button" id="reg_me" value="Registreeri">
 					</form>	
 				</div><!-- End userlinks -->
 				
@@ -303,7 +303,48 @@
 					</div><!-- End toparea -->
 					
 					<div class="contentarea">
-						<input id="result_search" placeholder="Otsi..">
+						<form name="search" onsubmit="">
+							<table id="search_form">
+								<tr>
+									<td>
+										<input id="result_search" placeholder="Kandidaadi nimi">
+									</td>
+									<td><select name="s_erakond" id="s_era" 
+												onChange="selectpar(this)">
+											<option value="default" selected="selected">- Partei -</option>
+											<option value="VOT">VOT</option>
+											<option value="Puukesed">Puukesed</option>
+											<option value="V�psikud">V�psikud</option>
+											<option value="Kuusekesed">Kuusekesed</option>
+											<option value="Randomness">Randomness</option>
+										</select>
+									</td>
+									<td><select name="s_regioon" id="s_reg"
+												onChange="selectpiir(this)">
+											<option value="default" selected="selected">- Maakond -</option>
+											<option value="Harju maakond">Harju maakond</option>
+											<option value="Hiiu maakond">Hiiu maakond</option>
+											<option value="Ida-Viru maakond">Ida-Viru maakond</option>
+											<option value="J�geva maakond">J�geva maakond</option>
+											<option value="J�rva maakond">J�rva maakond</option>
+											<option value="L��ne maakond">L��ne maakond</option>
+											<option value="L��ne-Viru maakond">L��ne-Viru maakond</option>
+											<option value="P�lva maakond">P�lva maakond</option>
+											<option value="P�rnu maakond">P�rnu maakond</option>
+											<option value="Rapla maakond">Rapla maakond</option>
+											<option value="Saare maakond">Saare maakond</option>
+											<option value="Tartu maakond">Tartu maakond</option>
+											<option value="Valga maakond">Valga maakond</option>
+											<option value="Viljandi maakond">Viljandi maakond</option>
+											<option value="V�ru maakond">V�ru maakond</option>
+										</select>
+									</td>
+									<td>
+										<input type="submit" class="buttonss" value="Otsi" name="search_b">
+									</td>
+								</tr>
+							</table>
+						</form><br>
 						<table id="result_table" class="sortable">
 							<tr><th>Nimi</th><th>Piirkond</th><th>Erakond</th><th>Häälte arv</th></tr>
 						</table>
@@ -635,8 +676,8 @@
 							<tr>
 								<td></td>
 								<td>
-									<input type="button" class="buttonss" value="Kinnita" name="reg_user" onclick="location.href='Coffeebreak2013vrl.html';"><br>
-									<input type="button" class="buttonss" value="Tühista" name="reg_cancel" onclick="location.href='main_guest.html';">
+									<input type="button" class="buttonss" value="Kinnita" name="reg_user" id="reg_u" onclick="location.href='Coffeebreak2013vrl.html';"><br>
+									<input type="button" class="buttonss" value="Tühista" name="reg_cancel" id="reg_canc">
 									<input type="reset" class="buttonss" value="T�hjenda v�ljad" name="reset_field" onclick="algstaatus();">
 								</td>
 								<td></td>

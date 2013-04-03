@@ -28,6 +28,9 @@ $(document).ready(function() {
 	$('#haaleta_search').keyup(function(){
 		searchTable_haaleta($(this).val());
 	});	
+	$('#kandidaadid_info_search').keyup(function(){
+		searchTable_kandidaadid_info($(this).val());
+	});
 })
 
 function searchTable_result(inputVal)
@@ -168,6 +171,29 @@ function searchTable_haaleta(inputVal)
 	});
 }
 
+function searchTable_kandidaadid_info(inputVal)
+{
+	var table = $('#kandidaadid_info_table');
+	table.find('tr').each(function(index, row)
+	{
+		var allCells = $(row).find('td');
+		if(allCells.length > 0)
+		{
+			var found = false;
+			allCells.each(function(index, td)
+			{
+				var regExp = new RegExp(inputVal, 'i');
+				if(regExp.test($(td).text()))
+				{
+					found = true;
+					return false;
+				}
+			});
+			if(found == true)$(row).show();else $(row).hide();
+		}
+	});
+}
+
 $('#loading')
 .hide() 
 .ajaxStart(function() {
@@ -178,6 +204,10 @@ $('#loading')
 })
 ;
 
-$('#reg_u').on('click', function () {
+$('#reg_me').on('click', function () {
     $('#container_registreeri, #overlay-back').fadeIn(500);
+});
+
+$('#reg_canc').on('click', function () {
+    $('#container_registreeri, #overlay-back').fadeOut(500);
 });
