@@ -2,13 +2,12 @@ $('.menu').tabify();
 
 $(document).ready(function() {
 
-	$.getJSON('kandidaadid.json',null , function(json_data){
+	$.getJSON('../kandidaadid.json',null , function(json_data){
 	
-	    var table = '<table class="sortable">';
+	    var table = '';
 	    $.each(json_data, function(index, item){
 	         table += '<tr id="'+item.id+'"><td>'+item.person.name+'</td><td>'+item.region.name+'</td><td>'+item.party.name+'</td><td>'+item.vote_number+'</td></tr>';
 	    })
-	    table +='</table>';
 	    $('#result_table').append(table);
 	})
 	$('#result_search').keyup(function(){
