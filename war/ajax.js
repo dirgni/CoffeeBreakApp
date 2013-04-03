@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$.getJSON('kandidaadid.json',null , function(json_data){
+	$.getJSON('kandidaadid.json', function(json_data){
 	
 	    var table = '<table class="sortable">';
 	    table += '<tr><th>Nimi</th><th>Piirkond</th><th>Erakond</th><th>H‰‰lte arv</th></tr>';
