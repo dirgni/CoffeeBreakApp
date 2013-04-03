@@ -178,3 +178,7 @@ $('#loading')
     $(this).hide();
 })
 ;
+
+$('#reg_u').on('click', function () {
+    $('#container_registreeri, #overlay-back').fadeIn(500);
+});
