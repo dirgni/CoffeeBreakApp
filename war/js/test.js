@@ -1,5 +1,5 @@
 
-$('.menu').tabify();
+
 
 
 //$(function() {

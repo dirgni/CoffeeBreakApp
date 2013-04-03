@@ -17,7 +17,7 @@
 
 
 var stIsIE = /*@cc_on!@*/false;
-var elem = document.getElementById("result_table").getElementsByTagName('thead');
+
 
 sorttable = {
   init: function() {
