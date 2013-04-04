@@ -32,7 +32,7 @@
   
   <servlet>
 	<servlet-name>kandidaadid</servlet-name>
-	<servlet-class>ee.ut.vrl.server.KandidaadidServlet</servlet-class>
+	<servlet-class>ee.ut.vrl.server.KandidaatServlet</servlet-class>
   </servlet>
 		
   <servlet-mapping>
