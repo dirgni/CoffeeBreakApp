@@ -228,6 +228,14 @@ p{
 	color: #339;
 }
 
+#cancel_v{
+	visibility: hidden;
+}
+
+#kandideerin_info{
+	display: none;
+}
+
 /* .container{
 	position: relative;
 	background: url("../graphics/mockup1_0009_base.png");
