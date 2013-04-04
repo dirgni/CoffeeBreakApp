@@ -20,7 +20,7 @@ function formvalidation(){
 	fail8 = selectpiir(uregioon);
 	
 	if(fail1 && fail2 && fail3 && fail4 && fail5 && fail6 && fail7 && fail8){
-		alert('JEE!!!1!ykssz');  
+		alert('Teie kandidatuur on edukalt lisatud.');  
 //		window.location.reload()
 	} else {
 		return false;

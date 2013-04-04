@@ -139,7 +139,7 @@
 						</div>	
 						
 						<input id="piirkond_search" placeholder="Otsi..">		
-						<form name="search" onsubmit="">
+						<!-- <form name="search" onsubmit="">
 							<table id="search_form">
 								<tr>
 									<td><select name="s_regioon" id="s_reg"
@@ -167,7 +167,7 @@
 									</td>
 								</tr>
 							</table>
-						</form>
+						</form> -->
 						<table id="piirkond_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
@@ -217,7 +217,7 @@
 		
 						</div>
 						<input id="partei_search" placeholder="Otsi..">
-						<form name="search" onsubmit="">
+						<!-- <form name="search" onsubmit="">
 							<table id="search_form">
 								<tr>
 									<td><select name="s_erakond" id="s_era" 
@@ -235,7 +235,7 @@
 									</td>
 								</tr>
 							</table>
-						</form><br>
+						</form><br> -->
 						<table id="partei_table" class="sortable">
 							<tr>
 								<th>Nimi</th>
@@ -345,9 +345,9 @@
 							<table id="search_form">
 								<tr>
 									<td>
-										<input id="result_search" placeholder="Kandidaadi nimi">
+										<input id="result_search" placeholder="Otsi..">
 									</td>
-									<td><select name="s_erakond" id="s_era" 
+									<!-- <td><select name="s_erakond" id="s_era" 
 												onChange="selectpar(this)">
 											<option value="default" selected="selected">- Partei -</option>
 											<option value="VOT">VOT</option>
@@ -379,7 +379,7 @@
 									</td>
 									<td>
 										<input type="submit" class="buttonss" value="Otsi" name="search_b">
-									</td>
+									</td> -->
 								</tr>
 							</table>
 						</form><br>
@@ -399,9 +399,9 @@
 							<table id="search_form">
 								<tr>
 									<td>
-										<input id="haaleta_search" placeholder="Kandidaadi nimi">
+										<input id="haaleta_search" placeholder="Otsi..">
 									</td>
-									<td><select name="s_erakond" id="s_era" 
+									<!-- <td><select name="s_erakond" id="s_era" 
 												onChange="selectpar(this)">
 											<option value="default" selected="selected">- Partei -</option>
 											<option value="VOT">VOT</option>
@@ -433,7 +433,7 @@
 									</td>
 									<td>
 										<input type="submit" class="buttonss" value="Otsi" name="search_b">
-									</td>
+									</td> -->
 								</tr>
 							</table>
 						</form><br>
@@ -448,43 +448,43 @@
 								<td>Mari Maasikas</td>
 								<td>Kohtla-Järve</td>
 								<td>Võpsikud</td>
-								<td><input type="radio" name="valik"></td>
+								<td><input type="radio" name="valik" class="radioSel" value="1"></td>
 							</tr>
 							<tr>
 								<td>Tauri Tamm</td>
 								<td>Keila</td>
 								<td>Puukesed</td>
-								<td><input type="radio" name="valik"></td>
+								<td><input type="radio" name="valik" class="radioSel" value="2"></td>
 							</tr>
 							<tr>
 								<td>Janno Jõgi</td>
 								<td>Tartu</td>
 								<td>Kuusekesed</td>
-								<td><input type="radio" name="valik"></td>
+								<td><input type="radio" name="valik" class="radioSel" value="3"></td>
 							</tr>
 							<tr>
 								<td>Meeri Mets</td>
 								<td>Rapla</td>
 								<td>VOT</td>
-								<td><input type="radio" name="valik"></td>
+								<td><input type="radio" name="valik" class="radioSel" value="4"></td>
 							</tr>
 							<tr>
 								<td>Kalle Kask</td>
 								<td>Võru</td>
 								<td>Puukesed</td>
-								<td><input type="radio" name="valik"></td>
+								<td><input type="radio" name="valik" class="radioSel" value="5"></td>
 							</tr>
 							<tr>
 								<td>Toomas Toomingas</td>
 								<td>Pärnu</td>
 								<td>Randomness</td>
-								<td><input type="radio" name="valik"></td>
+								<td><input type="radio" name="valik" class="radioSel" value="6"></td>
 							</tr>
 						</table>
 						
 						<form>
-							<input class="buttons" type="button" id="confirm" value="Kinnita"
-								onclick="location.href='main.html';">
+							<input class="buttons" type="button" id="confirm" value="Kinnita">
+							<input class="buttons" type="button" id="cancel_v" value="Tühista">
 						</form>				
 					</div>
 		
@@ -493,8 +493,8 @@
 				<div id="container_kandideeri" class="container">
 					<div class="toparea"> </div><!-- End toparea -->
 					
-					<div class="contentarea">
-						<form name="apply" onsubmit="return(formvalidation());">
+					<div class="contentarea" id="kandideerin_vorm">
+						<form name="apply" id="apply_form" onsubmit="return(formvalidation());">
 							<table id=application_form class="tables">
 								<tr>
 									<td>Eesnimi</td>
@@ -731,13 +731,48 @@
 								<tr>
 									<td></td>
 									<td>
-										<input type="submit" class="buttonss" value="Kinnita kandidatuur" name="submit_kandidatuur"><br>
+										<input type="submit" class="buttonss" value="Kinnita kandidatuur" name="submit_kandidatuur" id="subm_kandidatuur"><br>
 										<input type="reset" class="buttonss" value="Tühjenda väljad" name="reset_field" onclick="algstaatus();">
 									</td>
 									<td></td>
 								</tr>
 							</table>
 						</form>
+					</div> <!-- End contentarea -->
+					
+					<div class="contentarea" id="kandideerin_info">
+						<table id=application_val class="tables">
+							<tr>
+								<td>Eesnimi</td>
+								<td> ... </td>
+							</tr>
+							<tr>
+								<td>Perenimi</td>
+								<td> ... </td>
+							</tr>
+							<tr>
+								<td>E-mail</td>
+								<td> ...@..... </td>
+							</tr>
+							<tr>
+								<td>Sünnikuupäev</td>
+								<td> ../../....</td>
+							</tr>
+							<tr>
+								<td>Erakond</td>
+								<td> ... </td>
+							</tr>
+							<tr>
+								<td>Maakond</td>
+								<td> ...	</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<input type="submit" class="buttonss" value="Tühista kandidatuur" name="cancel_kandidatuur" id="canc_kandidatuur"><br>
+								</td>
+							</tr>
+						</table>
 					</div> <!-- End contentarea -->
 		
 				</div> <!-- End container_kandideeri -->

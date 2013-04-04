@@ -211,3 +211,38 @@ $('#reg_me').on('click', function () {
 $('#reg_canc').on('click', function () {
     $('#container_registreeri, #overlay-back').fadeOut(500);
 });
+
+
+var myVal = "0";
+$("input:radio[name=valik]").click(function() {
+	myVal = $(this).val();
+});
+
+$('#confirm').on('click', function() { DisableFields(myVal)});
+$('#cancel_v').on('click', function() { AbleFields()});
+
+function DisableFields(value){
+	if (value!="0") {
+		$('.radioSel').attr('disabled','true');
+		document.getElementById("confirm").style.visibility = "hidden";
+		document.getElementById("cancel_v").style.visibility = "visible";
+	}
+};
+
+function AbleFields(){
+	myVal="0";
+	$('.radioSel').removeAttr('disabled');
+	document.getElementById("confirm").style.visibility = "visible";
+	document.getElementById("cancel_v").style.visibility = "hidden";
+};
+
+
+//function maasikas(){
+//	document.getElementById("kandideerin_vorm").style.visibility = "hidden";
+//	document.getElementById("kandideerin_info").style.visibility = "visible";
+//};
+//
+//$('#canc_kandidatuur').on('click', function(){
+//	document.getElementById("kandideerin_vorm").style.visibility = "visible";
+//	document.getElementById("kandideerin_info").style.visibility = "hidden";
+//});
