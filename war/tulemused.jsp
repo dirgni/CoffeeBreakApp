@@ -10,7 +10,7 @@
 
 <%
 Connection c = null;
-c = DriverManager.getConnection("jdbc:google:rdbms://coffeebreak2013vrlsql:andmebaas/kandidaadid");
+c = DriverManager.getConnection("jdbc:google:rdbms://coffeebreak2013vrlsql:andmebaas/valimised");
 ResultSet rs = c.createStatement().executeQuery("SELECT id, personid, personname, partyid, partyname, regionid, regionname, votes FROM kandidaadid"); %>
 
 <table style="border: 1px solid black">

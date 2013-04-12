@@ -2,11 +2,11 @@ $('.menu').tabify();
 
 $(document).ready(function() {
 
-	$.getJSON('../kandidaadid.json',null , function(json_data){
+	$.getJSON('/kandidaadid',null , function(json_data){
 	
 	    var table = '';
 	    $.each(json_data, function(index, item){
-	         table += '<tr id="'+item.id+'"><td>'+item.person.name+'</td><td>'+item.region.name+'</td><td>'+item.party.name+'</td><td>'+item.vote_number+'</td></tr>';
+	         table += '<tr id="'+item.id+'"><td>'+item.person.name+'</td><td>'+item.region.name+'</td><td>'+item.party.name+'</td><td>'+item.votes+'</td></tr>';
 	    })
 	    $('#result_table').append(table);
 	})

@@ -24,14 +24,14 @@ public class KandidaatServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 			
-			response.setContentType("text/html; charset=UTF-8");
+			response.setContentType("application/json");
 		  	PrintWriter out = response.getWriter();
 		  	Connection c = null;
 			Gson gson = new Gson();
 		  	
 		  	try {
 				DriverManager.registerDriver(new AppEngineDriver());
-				c = DriverManager.getConnection("jdbc:google:rdbms://coffeebreak2013vrlsql:andmebaas/kandidaadid");
+				c = DriverManager.getConnection("jdbc:google:rdbms://coffeebreak2013vrlsql:andmebaas/valimised");
 				ResultSet rs = c.createStatement().executeQuery("SELECT id, personid, personname, regionid, regionname, partyid, partyname, votes FROM kandidaadid");
 
 				ArrayList<Candidate> candidates = new ArrayList<Candidate>();
@@ -50,14 +50,13 @@ public class KandidaatServlet extends HttpServlet{
 				}
 
 				String json = gson.toJson(candidates);
-				out.print("<head></head>\n" + "<body>\n" + 
-						"<p>333</p>\n" + json + "</body>\n</html>");
+				out.print(json);
 				out.flush();
 			
 			}catch (SQLException e) {
 		        e.printStackTrace();
-
 			}finally {
+				out.close();
 				if (c != null) 
 		        	try {
 		        		c.close();
