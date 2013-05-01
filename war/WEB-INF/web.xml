@@ -35,14 +35,14 @@
 	<url-pattern>/kandidaadid</url-pattern>
   </servlet-mapping>
   
-    <servlet>
-	<servlet-name>test</servlet-name>
-	<servlet-class>ee.ut.vrl.server.Test</servlet-class>
+  <servlet>
+	<servlet-name>piirkond</servlet-name>
+	<servlet-class>ee.ut.vrl.server.otsiPiirkondServlet</servlet-class>
   </servlet>
 		
   <servlet-mapping>
-	<servlet-name>test</servlet-name>
-	<url-pattern>/test</url-pattern>
+	<servlet-name>piirkond</servlet-name>
+	<url-pattern>/piirkond</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->

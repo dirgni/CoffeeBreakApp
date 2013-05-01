@@ -9,7 +9,41 @@ $(document).ready(function() {
 	         table += '<tr id="'+item.id+'"><td>'+item.person.name+'</td><td>'+item.region.name+'</td><td>'+item.party.name+'</td><td>'+item.votes+'</td></tr>';
 	    })
 	    $('#result_table').append(table);
-	})
+	});
+	
+	//Stops the submit request 
+	$("#search").submit(function(e){       
+		e.preventDefault();    
+	}); 
+	
+	//checks for the button click event 
+    $("#search_b").click(function(e){ 
+    	
+    	dataString = $("#search").serialize(); 
+	
+    	 $.ajax({                
+    		 type: "POST",              
+    		 url: "/piirkond",              
+    		 data: dataString,                
+    		 dataType: "json", 
+    		 
+			//if received a response from the server                 
+	    	success: function( data, textStatus, jqXHR) { 	
+			
+				if(data.success){ 
+				    var table = '';
+				    $.each(json_data, function(index, item){
+				         table += '<tr id="'+item.id+'"><td>'+item.person.name+'</td><td>'+item.region.name+'</td><td>'+item.party.name+'</td></tr>';
+				    })
+				    $('#piirkond_table').append(table);
+				}
+				else {                         
+					$("#search").html("<div><b>Ei</b></div>");       
+				} 
+	    	}
+		});
+    });
+	
 	$('#result_search').keyup(function(){
 		searchTable_result($(this).val());
 	});
