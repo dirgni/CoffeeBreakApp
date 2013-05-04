@@ -21,7 +21,7 @@ public class otsiPiirkondServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 			
 			response.setContentType("application/json");
@@ -30,7 +30,8 @@ public class otsiPiirkondServlet extends HttpServlet{
 			Gson gson = new Gson();
 		  	
 		  	try {
-				String  searchRegion  = request.getParameter("s_reg");
+				String searchRegion = request.getParameter("searchReg");
+				//String searchParty = request.getParameter("searchEra");
 				DriverManager.registerDriver(new AppEngineDriver());
 				c = DriverManager.getConnection("jdbc:google:rdbms://coffeebreak2013vrlsql:andmebaas/valimised");
 				ResultSet rs = c.createStatement().executeQuery("SELECT id, personid, personname, regionid, regionname, partyid, partyname, votes FROM kandidaadid WHERE regionname='"+searchRegion+"' ORDER BY personname");
@@ -49,10 +50,12 @@ public class otsiPiirkondServlet extends HttpServlet{
 				    candidate.setVotes(rs.getInt("votes"));
 				    candidates.add(candidate);
 				}
-
+				
+				//if (candidates.size() != 0){
 				String json = gson.toJson(candidates);
 				out.print(json);
-				//out.flush();
+				out.flush();
+				//}
 			
 			}catch (SQLException e) {
 		        e.printStackTrace();
@@ -67,27 +70,6 @@ public class otsiPiirkondServlet extends HttpServlet{
 		
 	}	
 	
-	/*public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-			doGet(request, response);
-	}*/
 
-//	public static class Candidates implements Serializable{
-//		private static final long serialVersionUID = 1L;
-//		private ArrayList<Candidate> candidates;
-//		
-//		public Candidates(ArrayList<Candidate> candidates){
-//			this.candidates = candidates;
-//		}
-//
-//		public List<Candidate> getCandidates() {
-//			return candidates;
-//		}
-//
-//		public void setCandidates(ArrayList<Candidate> candidates) {
-//			this.candidates = candidates;
-//		}
-//				
-//	}
 }
 

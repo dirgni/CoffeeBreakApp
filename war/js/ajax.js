@@ -1,5 +1,3 @@
-$('.menu').tabify();
-
 $(document).ready(function() {
 
 	$.getJSON('/kandidaadid',null , function(json_data){
@@ -12,35 +10,58 @@ $(document).ready(function() {
 	});
 	
 	//Stops the submit request 
-	$("#search").submit(function(e){       
+	$("#searchPiirkond").submit(function(e){       
 		e.preventDefault();    
 	}); 
 	
 	//checks for the button click event 
-    $("#search_b").click(function(e){ 
-    	
-    	dataString = $("#search").serialize(); 
+    $("#sButtonPiirkond").click(function(e){ 
+    	    	
+    	//get the form data            
+    	var region = $("select").val();              
+    	dataString = "searchReg=" + region; 
 	
-    	 $.ajax({                
-    		 type: "POST",              
-    		 url: "/piirkond",              
-    		 data: dataString,                
-    		 dataType: "json", 
-    		 
-			//if received a response from the server                 
-	    	success: function( data, textStatus, jqXHR) { 	
-			
-				if(data.success){ 
-				    var table = '';
-				    $.each(json_data, function(index, item){
-				         table += '<tr id="'+item.id+'"><td>'+item.person.name+'</td><td>'+item.region.name+'</td><td>'+item.party.name+'</td></tr>';
-				    })
-				    $('#piirkond_table').append(table);
-				}
-				else {                         
-					$("#search").html("<div><b>Ei</b></div>");       
-				} 
-	    	}
+    	 $.ajax({
+    		 type: "GET",              
+			 url: "/piirkond",              
+			 data: dataString,                
+			 dataType: "json", 
+			 
+			 //if received a response from the server                 
+			 success: function(data) {
+				 console.debug(data);				 
+				 if(data == '[]'){ 
+					 $("#piirkond_table").append("<tr><td><b>Ei</b></td><td><b>leidnud</b></td><td><b>ühtegi</b></td><td><b>kandidaati</b></td></tr>"); 
+				 }
+				 else {    
+					 var table = '';
+					 $.each(data, function(index, item){
+				         table += '<tr id="'+item.id+'"><td>'+item.person.name+'</td><td>'+item.region.name+'</td><td>'+item.party.name+'</td><td>'+item.votes+'</td></tr>';
+				     })
+				     $('#piirkond_table').append(table);      
+				 } 
+			 },
+		 
+			 //If there was no resonse from the server                 
+			 error: function(jqXHR, textStatus, errorThrown){                      
+				 console.log("Tekkis viga " + textStatus + ": " + errorThrown);                       
+				 $("#piirkond_table").html(jqXHR.responseText);                 
+			 },                                  
+				 
+			 //capture the request before it was sent to server                 
+			 beforeSend: function(jqXHR, settings){				 
+				 //adding some Dummy data to the request                     
+				 settings.data += "&dummyData=whatever";                     
+				 //disable the button until we get the response                     
+				 $('#sButtonPiirkond').attr("disabled", true);                 
+			 },                                  
+					 
+			 //this is called after the response or error functions are finsihed                 
+			 //so that we can take some action                 
+			 complete: function(jqXHR, textStatus){                     
+				//enable the button
+				$('#sButtonPiirkond').attr("disabled", false);                 
+			 } 
 		});
     });
 	

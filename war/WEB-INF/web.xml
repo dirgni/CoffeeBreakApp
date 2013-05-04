@@ -47,8 +47,8 @@
   
   <!-- Default page to serve -->
   <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
     <welcome-file>Coffeebreak2013vrl.html</welcome-file>
-    <welcome-file>kandidaadid.jsp</welcome-file>
   </welcome-file-list>
   
 </web-app>
