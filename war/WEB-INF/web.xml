@@ -45,6 +45,26 @@
 	<url-pattern>/piirkond</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+	<servlet-name>haaleta</servlet-name>
+	<servlet-class>ee.ut.vrl.server.haaletaServlet</servlet-class>
+  </servlet>
+		
+  <servlet-mapping>
+	<servlet-name>haaleta</servlet-name>
+	<url-pattern>/haaleta</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>kandideeri</servlet-name>
+	<servlet-class>ee.ut.vrl.server.kandideeriServlet</servlet-class>
+  </servlet>
+		
+  <servlet-mapping>
+	<servlet-name>kandideeri</servlet-name>
+	<url-pattern>/kandideeri</url-pattern>
+  </servlet-mapping>
+  
   <!-- Default page to serve -->
   <welcome-file-list>
   	<welcome-file>index.html</welcome-file>

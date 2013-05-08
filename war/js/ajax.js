@@ -34,11 +34,11 @@ $(document).ready(function() {
 					 $("#piirkond_table").append("<tr><td><b>Ei</b></td><td><b>leidnud</b></td><td><b>ühtegi</b></td><td><b>kandidaati</b></td></tr>"); 
 				 }
 				 else {    
-					 var table = '';
+					 var table = '<tr><th>Nimi</th><th>Piirkond</th><th>Partei</th><th>Häälte arv</th></tr>';
 					 $.each(data, function(index, item){
 				         table += '<tr id="'+item.id+'"><td>'+item.person.name+'</td><td>'+item.region.name+'</td><td>'+item.party.name+'</td><td>'+item.votes+'</td></tr>';
 				     })
-				     $('#piirkond_table').append(table);      
+				     $('#piirkond_table').html(table);      
 				 } 
 			 },
 		 

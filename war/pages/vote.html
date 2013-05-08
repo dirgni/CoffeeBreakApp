@@ -1,0 +1,99 @@
+<div class="toparea">	</div><!-- End toparea -->
+
+<div class="contentarea">
+    <form name="search" method="post">
+        <table id="search_form">
+            <tr>
+                <td>
+                    <input id="haaleta_search" placeholder="Otsi..">
+                </td>
+                <td><select name="h_erakond" id="h_era"
+                            onChange="selectpar(this)">
+                        <option value="default" selected="selected">- Partei -</option>
+                        <option value="VOT">VOT</option>
+                        <option value="Puukesed">Puukesed</option>
+                        <option value="Võpsikud">Võpsikud</option>
+                        <option value="Kuusekesed">Kuusekesed</option>
+                        <option value="Randomness">Randomness</option>
+                    </select>
+                </td>
+                <td><select name="h_regioon" id="h_reg"
+                            onChange="selectpiir(this)">
+                        <option value="default" selected="selected">- Maakond -</option>
+                        <option value="Harju maakond">Harju maakond</option>
+                        <option value="Hiiu maakond">Hiiu maakond</option>
+                        <option value="Ida-Viru maakond">Ida-Viru maakond</option>
+                        <option value="Jõgeva maakond">Jõgeva maakond</option>
+                        <option value="Järva maakond">Järva maakond</option>
+                        <option value="Lääne maakond">Lääne maakond</option>
+                        <option value="Lääne-Viru maakond">Lääne-Viru maakond</option>
+                        <option value="Põlva maakond">Põlva maakond</option>
+                        <option value="Pärnu maakond">Pärnu maakond</option>
+                        <option value="Rapla maakond">Rapla maakond</option>
+                        <option value="Saare maakond">Saare maakond</option>
+                        <option value="Tartu maakond">Tartu maakond</option>
+                        <option value="Valga maakond">Valga maakond</option>
+                        <option value="Viljandi maakond">Viljandi maakond</option>
+                        <option value="Võru maakond">Võru maakond</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="submit" class="buttonss" value="Otsi" name="search_b">
+                </td>
+            </tr>
+        </table>
+        
+        Nimi: <input type="text" name="name"><br>
+    </form><br>
+    
+    
+    <table id="haaleta_table" class="sortable">
+        <tr>
+            <th>Nimi</th>
+            <th>Piirkond</th>
+            <th>Partei</th>
+            <th>Valik</th>
+        </tr>
+        <tr>
+            <td>Mari Maasikas</td>
+            <td>Kohtla-Järve</td>
+            <td>Võpsikud</td>
+            <td><input type="radio" name="valik" class="radioSel" value="1"></td>
+        </tr>
+        <tr>
+            <td>Tauri Tamm</td>
+            <td>Keila</td>
+            <td>Puukesed</td>
+            <td><input type="radio" name="valik" class="radioSel" value="2"></td>
+        </tr>
+        <tr>
+            <td>Janno Jõgi</td>
+            <td>Tartu</td>
+            <td>Kuusekesed</td>
+            <td><input type="radio" name="valik" class="radioSel" value="3"></td>
+        </tr>
+        <tr>
+            <td>Meeri Mets</td>
+            <td>Rapla</td>
+            <td>VOT</td>
+            <td><input type="radio" name="valik" class="radioSel" value="4"></td>
+        </tr>
+        <tr>
+            <td>Kalle Kask</td>
+            <td>Võru</td>
+            <td>Puukesed</td>
+            <td><input type="radio" name="valik" class="radioSel" value="5"></td>
+        </tr>
+        <tr>
+            <td>Toomas Toomingas</td>
+            <td>Pärnu</td>
+            <td>Randomness</td>
+            <td><input type="radio" name="valik" class="radioSel" value="6"></td>
+        </tr>
+    </table>
+
+    <form>
+        <input class="buttons" type="button" id="confirm" value="Kinnita">
+        <input class="buttons" type="button" id="cancel_v" value="Tühista">
+    </form>
+</div>
