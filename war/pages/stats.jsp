@@ -10,11 +10,11 @@
 
 <div class="contentarea">
 
-    <div class="diagramm">
+<!--     <div class="diagramm">
         <form>
             <input class="button5" type="button" id="piirkond_diagramm"
                    value="Kuva diagramm">
-        </form>
+        </form> -->
 
 
     </div>

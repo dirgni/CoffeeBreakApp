@@ -98,19 +98,65 @@ NAVI = {
      },
      
      initialize: function() {
+    	 
 	    var mapProp = {
 	      center:new google.maps.LatLng(58.508742,25.020850),
 	      zoom:7,
 	      mapTypeId:google.maps.MapTypeId.ROADMAP
 	      };
 	    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	    
+	    var marker = new google.maps.Marker({
+	         map: map,
+	         position: new google.maps.LatLng(58.38062, 26.72509),
+	         visible: true
+	        });
+	    
+        var boxText = document.createElement("div");
+        boxText.style.cssText = "border: 1px solid black; margin-top: 8px; background: yellow; padding: 5px;";
+        boxText.innerHTML = "Tartu<br>Tartumaa<br>";
+                
+        var myOptions = {
+                 content: boxText
+                ,disableAutoPan: false
+                ,maxWidth: 0
+                ,pixelOffset: new google.maps.Size(-140, 0)
+                ,zIndex: null
+                ,boxStyle: { 
+                  background: "url('tipbox.gif') no-repeat"
+                  ,opacity: 0.75
+                  ,width: "280px"
+                 }
+                ,closeBoxMargin: "10px 2px 2px 2px"
+                ,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
+                ,infoBoxClearance: new google.maps.Size(1, 1)
+                ,isHidden: false
+                ,pane: "floatPane"
+                ,enableEventPropagation: false
+        };
+       	
+    	google.maps.event.addListener(marker, "click", function (e) {
+			ib.open(theMap, this);
+    	});	
+	        
+    	var ib = new InfoBox(myOptions);
+	    ib.open(map, marker);    
+
      },
 
-	 loadScript: function() {
+	 loadScript: function(callback) {
 		var script = document.createElement("script");
 		script.type = "text/javascript";
 		script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyANeacaev765Lzw74t_96zZNqvnlAqJc78&sensor=false&callback=NAVI.initialize";
 		document.body.appendChild(script);
+	    script.onload = function() {
+	        var scriptInfoBox = document.createElement("script");
+	        scriptInfoBox.type = "text/javascript";
+	        scriptInfoBox.src = "http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox_packed.js";
+	        document.body.appendChild(scriptInfoBox);
+	        scriptInfoBox.onload = callback;
+	    };
+
 	 },
 
     loadPage: function(elem) {
@@ -126,10 +172,10 @@ NAVI = {
             self.loading.hide();
             if (page.name === 'Statistika') {
             	self.loadScript();
+            	
             }
         });
 
-        
     },
 
     refresh: function() {
